@@ -6,6 +6,7 @@
 3. chuyển nhánh: git checkout feature/"YourName"
    vd: git checkout feature/Tuan
 4. Nếu push: git push origin feature/"YourName"
+5. "Tuan"
 
 ## Sau mỗi ngày làm thì mọi người sẽ merge code của mình lên nhánh develop để sửa config
 

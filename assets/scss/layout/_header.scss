@@ -1,0 +1,41 @@
+header{
+    background-color: $color-dark-1;
+    // margin-bottom: $mg-2;
+    height: 80px;
+
+    .navbar{
+        padding-top: $pd-3;
+    }
+
+    .navbar-brand{
+        @include style-text($color-text-1,$fs-3,$fw-3)
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                @include style-text($color-text-1,$fs-3,$fw-2)
+            }
+        }
+    }
+}
+
+
+//table
+
+
+.myCardHeader {
+    background-color: $color-table;
+    border-top-left-radius: $bd-3 !important;
+    border-top-right-radius: $bd-3 !important;
+    margin-top: $mg-3;
+    .text-left{
+        color: $color-text-1 !important;
+    }
+    .text-right{
+        .btn{
+            background-color: $color-button-1 ;
+            color: $color-text-1;
+        }
+    }
+}
+

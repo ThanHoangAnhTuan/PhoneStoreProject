@@ -3,3 +3,39 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+header {
+  background-color: #313131;
+  height: 80px;
+}
+header .navbar {
+  padding-top: 15px;
+}
+header .navbar-brand {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 20px;
+}
+header .navbar-nav .nav-item .nav-link {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 20px;
+}
+
+.myCardHeader {
+  background-color: #60679b;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  margin-top: 70px;
+}
+.myCardHeader .text-left {
+  color: #ffffff !important;
+}
+.myCardHeader .text-right .btn {
+  background-color: #244350;
+  color: #ffffff;
+}
+
+footer .ft {
+  background-color: linear-gradient(to bottom, #000066 0%, #993366 100%) !important;
+}/*# sourceMappingURL=style.css.map */

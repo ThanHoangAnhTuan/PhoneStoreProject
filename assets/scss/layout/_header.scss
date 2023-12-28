@@ -10,13 +10,18 @@ header{
     .navbar-brand{
         @include style-text($color-text-1,$fs-3,$fw-3)
     }
+    .collapse {
+        align-items: center;
     .navbar-nav{
         .nav-item{
             .nav-link{
-                @include style-text($color-text-1,$fs-3,$fw-2)
-            }
+                @include style-text($color-text-1,$fs-3,$fw-2);
+                
+                
+            }        
         }
     }
+}
 }
 
 

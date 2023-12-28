@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 header {
   background-color: #313131;
   height: 80px;
@@ -17,7 +16,10 @@ header .navbar-brand {
   font-size: 20px;
   font-weight: 20px;
 }
-header .navbar-nav .nav-item .nav-link {
+header .collapse {
+  align-items: center;
+}
+header .collapse .navbar-nav .nav-item .nav-link {
   color: #ffffff !important;
   font-size: 20px;
   font-weight: 20px;
@@ -37,10 +39,13 @@ header .navbar-nav .nav-item .nav-link {
   color: #ffffff;
 }
 
-footer .ft {
-  background-color: linear-gradient(to bottom, #000066 0%, #993366 100%) !important;
-}/*# sourceMappingURL=style.css.map */
-=======
+footer .footer__top {
+  display: flex;
+}
+footer .footer__bottom {
+  display: flex;
+}
+
 .home {
   background-image: url(https://shopping-cart-demo2.vercel.app/customer/view/img/bg.jpg);
   background-repeat: no-repeat;
@@ -63,8 +68,7 @@ footer .ft {
 .home .container a img {
   width: 250px;
   height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   background-color: #fff;
   border-radius: 70px;
@@ -81,5 +85,4 @@ footer .ft {
   height: 4px;
   background-color: #f3ce5e;
   transition: all 0.3s;
-}
->>>>>>> cbbf93bd770ac0dc618c692580a2e2b4aff6c82d
+}/*# sourceMappingURL=style.css.map */

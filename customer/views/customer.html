@@ -66,7 +66,7 @@
                             <a
                                 class="nav-link"
                                 href="./../../customer/views/customer.html">
-                                <i class="fa-solid fa-store"></i>
+                                <i class="fa-solid fa-user-gear"></i>
                                 Admin Portal
                             </a>
                         </li>
@@ -81,102 +81,12 @@
             </nav>
         </header>
 
-        <!-- CAROUSEL  -->
-        <section class="phoneCarousel">
-            <!-- data-ride="carousel" -->
-            <div id="demo" class="carousel slide">
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                    <li
-                        data-target="#demo"
-                        data-slide-to="0"
-                        class="active"></li>
-                </ul>
-
-                <!-- The slideshow -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img
-                            src="../assets/img/bg.jpg"
-                            alt="backGround"
-                            width="100%"
-                            height="500" />
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-        </section>
-
-        <!-- FILTER  -->
-
         <!-- PRODUCT LIST  -->
         <section class="products container section">
-            <h2 class="section-title">- Products List -</h2>
             <div class="products__content">
-                <!-- Thêm vòng xoay loader -->
-                <!-- <div id="loader" style="display: none" class="loader"></div> -->
-
-                <div class="row" id="productList">
-                    <!-- <div class="col-12 col-md-6 col-lg-4">
-               <div class="card cardPhone">
-                  <img src="../assets/img/product1.jpg" class="card-img-top" alt="product Image">
-                  <div class="card-body">
-                     <div class="d-flex justify-content-between">
-                        <div>
-                           <h2 class="cardPhone__title">Product Name</h2>
-                           <p class="cardPhone__text">Description</p>
-                        </div>
-                        <div>
-                           <h3 class="cardPhone__title">$99.99</h3>
-                        </div>
-                     </div>
-                     <div>
-                        <p class="spec">Screen :</p>
-                        <p class="spec">Back Camera : </p>
-                        <p class="spec">Front Camera : </p>
-                     </div>
-                     <div class="d-flex justify-content-between">
-                        <div class="cardPhone__rating">
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                           <i class="fa fa-star"></i>
-                        </div>
-                        <div>
-                           <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-            </div> -->
-                </div>
+                <div class="row" id="productList"></div>
             </div>
         </section>
-
-        <!-- Table CartItem -Hiển thị tạm thời trước khi tạo Modal  -->
-        <div class="col-8 mx-auto">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Stt</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>số lượng</th>
-                    </tr>
-                </thead>
-                <tbody id="tbodyCartItem"></tbody>
-            </table>
-        </div>
 
         <!-- FOOTER  -->
         <footer>

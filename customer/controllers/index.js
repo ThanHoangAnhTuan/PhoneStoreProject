@@ -14,30 +14,21 @@ function getListProduct() {
         .then(function (result) {
             console.log("result", result.data);
             renderUI(result.data);
-            // hide loader
-            // getEle("loader").style.display = "none";
         })
         .catch(function (error) {
             console.log("error", error);
-            // hide loader
-            // getEle("loader").style.display = "none";
-        })
-};
+        });
+}
 
 getListProduct();
 
-function layThongTinCartItem(){
+function layThongTinCartItem() {
     const _name = getEle("phoneName").value;
     const _price = getEle("phonePrice").value;
     const _image = getEle("phoneImage").value;
     var _quality = 1;
 
-    const cartItem = new CartItem(
-        _name,
-        _price,
-        _image,
-        _quality
-    );
+    const cartItem = new CartItem(_name, _price, _image, _quality);
 
     return cartItem;
 }
@@ -65,7 +56,7 @@ function renderUI(data) {
                         <p class="spec">Screen : ${product.screen}</p>
                         <p class="spec">Back Camera : ${product.backCamera}</p>
                         <p class="spec">Front Camera : ${product.frontCamera}</p>
-                     </div>
+                    </div>
                             <div class="d-flex justify-content-between">
                                 <div class="cardPhone__rating">
                                     <i class="fa fa-star"></i>
@@ -78,15 +69,12 @@ function renderUI(data) {
                                     <button id="btnAdd" onclick="handleAddCart()" class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-        `
+        `;
     }
-
     document.getElementById("productList").innerHTML = content;
-
 }
 
 function renderUICart(data) {
@@ -105,44 +93,30 @@ function renderUICart(data) {
                 <button class="btn btn-info" onclick="handleEdit('${product.id}')">Edit</button>
                 <button class="btn btn-danger" onclick="handleDelete('${product.id}')">delete</button>
             </td>
-        </tr>
-         `;
+        </tr>`;
     }
 
     document.getElementById("tbodyCartItem").innerHTML = content;
-
 }
 
 function handleAddCart() {
     const cartItem = layThongTinCartItem();
-    // Thêm sản phẩm vào cart
     cart.addCart(cartItem);
-    // Show thông tin sản phẩm đã add vào cart
     renderUICart(cart.arr);
-    // lưu data item đã chọn vô Cart xuống localstorage
     setLocalStorage();
 }
 
-// Lưu dữ liệu xuống localStorage của Browser
 function setLocalStorage() {
-    //convert data từ JSON => string
     const dataString = JSON.stringify(cart.arr);
-    // lưu data xuống localStorage
     localStorage.setItem("CART", dataString);
 }
 
-// Lấy dữ liệu từ localStorage
 function getLocalStorage() {
     const dataString = localStorage.getItem("CART");
 
     if (dataString) {
-        //convert ngược lại từ string => json
         const dataJson = JSON.parse(dataString);
-        //Phục hồi data cho dssv.arr
         cart.arr = dataJson;
-        // render lại UI
         renderUICart(cart.arr);
-
     }
-
 }

@@ -1,7 +1,7 @@
 @mixin style-text($color, $font-size, $fw) {
     color: $color !important;
     font-size: $font-size;
-    font-weight: $font-size;
+    font-weight: $fw;
 }
 
 @mixin link {

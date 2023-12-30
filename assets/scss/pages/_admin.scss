@@ -1,19 +1,19 @@
 .admin {
-   padding: 0 7rem;
+    padding: 0 7rem;
 }
 
 .myCardHeader {
-   background-color: $color-table;
-   border-top-left-radius: $bd-3 !important;
-   border-top-right-radius: $bd-3 !important;
-   margin-top: $mg-3;
-   .text-left {
-      color: $color-text-1 !important;
-   }
-   .text-right {
-      .btn {
-         background-color: $color-button-1;
-         color: $color-text-1;
-      }
-   }
+    background-color: $color-table;
+    border-top-left-radius: $bd-3 !important;
+    border-top-right-radius: $bd-3 !important;
+    margin-top: $mg-3;
+    .text-left {
+        color: $color-text-1 !important;
+    }
+    .text-right {
+        .btn {
+            background-color: $color-button-1;
+            color: $color-text-1;
+        }
+    }
 }

@@ -4,29 +4,40 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #313131;
-  height: 80px;
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #313131 !important;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fff;
 }
+
+.navbar {
+  padding-top: 15px;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 header .navbar {
   padding: 0.5rem 7rem;
 }
 header .navbar .navbar-brand {
   color: #ffffff !important;
   font-size: 20px;
-  font-weight: 20px;
+  font-weight: 700;
 }
-header .collapse {
-  align-items: center;
-}
-header .collapse .navbar-nav .nav-item .nav-link {
 header .navbar .navbar-nav {
   width: 100%;
 }
 header .navbar .navbar-nav .nav-link {
   color: #ffffff !important;
   font-size: 20px;
-  font-weight: 20px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -49,6 +60,7 @@ header .navbar .navbar-nav .nav-link i {
 footer {
   background-image: linear-gradient(#1e2663, #9a3054);
   color: #fff;
+  font-size: 16px;
 }
 footer .footer__top {
   text-align: center;
@@ -110,13 +122,6 @@ footer .footer__bottom a {
   color: #ffffff;
 }
 
-footer .footer__top {
-  display: flex;
-}
-footer .footer__bottom {
-  display: flex;
-}
-
 .home {
   background-image: url(https://shopping-cart-demo2.vercel.app/customer/view/img/bg.jpg);
   background-repeat: no-repeat;
@@ -139,7 +144,8 @@ footer .footer__bottom {
 .home .container a img {
   width: 250px;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   background-color: #fff;
   border-radius: 70px;
@@ -156,5 +162,4 @@ footer .footer__bottom {
   height: 4px;
   background-color: #f3ce5e;
   transition: all 0.3s;
-}/*# sourceMappingURL=style.css.map */
 }

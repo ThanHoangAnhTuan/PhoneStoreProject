@@ -1,11 +1,10 @@
 @mixin style-text($color, $font-size, $fw) {
-   color: $color !important;
-   font-size: $font-size;
-   font-weight: $font-size;
+    color: $color !important;
+    font-size: $font-size;
+    font-weight: $font-size;
 }
 
 @mixin link {
-   color: $color-white;
-   text-decoration: none;
+    color: $color-white;
+    text-decoration: none;
 }
-

@@ -1,48 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta
-         name="viewport"
-         content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <!-- boostrap -->
-      <link
-         rel="stylesheet"
-         href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-         crossorigin="anonymous" />
 
-      <!-- font awesome -->
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-         crossorigin="anonymous"
-         referrerpolicy="no-referrer" />
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>PhoneStore_Customer</title>
 
-      <!-- main css -->
-      <link rel="stylesheet" href="./../../assets/css/style.css" />
-   </head>
-   <body>
-      <!-- boostrap -->
-      <script
-         src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-         crossorigin="anonymous"></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-         crossorigin="anonymous"></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-         crossorigin="anonymous"></script>
+   <!-- GOOGLE FONT -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-      <!-- js -->
-      <script src="./../models/model.js"></script>
-      <script src="./../services/api.js"></script>
-      <script src="./../views/view.js"></script>
-      <script src="./../controllers/index.js"></script>
-   </body>
+   <!-- boostrap -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- main css -->
+   <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+   <!-- siderbar Cart -->
+   <div class="slide Cart">
+
+   </div>
+
+   <!-- HEADER  -->
+   <header>
+      <nav class="phoneNav container navbar navbar-expand-lg">
+         <i class="fa-solid fa-robot"></i>
+         <a class="navbar-brand" href="#">PhoneStore</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#phoneNavbar"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+               <i class="fa fa-bars"></i>
+            </span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="phoneNavbar">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item active">
+                  <i class="fa-solid fa-house"></i>
+                  <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <i class="fa-solid fa-user-gear"></i>
+                  <a class="nav-link" href="#">Admind Portal</a>
+               </li>
+               <li class="nav-item">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <a class="nav-link" href="#">Cart</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+   </header>
+
+   <!-- CAROUSEL  -->
+   <section class="phoneCarousel">
+      <!-- data-ride="carousel" -->
+      <div id="demo" class="carousel slide">
+
+         <!-- Indicators -->
+         <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+         </ul>
+
+         <!-- The slideshow -->
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="../assets/img/bg.jpg" alt="backGround" width="100%" height="500">
+            </div>
+
+         </div>
+
+         <!-- Left and right controls -->
+         <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+         </a>
+      </div>
+   </section>
+
+   <!-- FILTER  -->
+
+   <!-- PRODUCT LIST  -->
+   <section class="products container section">
+      <h2 class="section-title">- Products List -</h2>
+      <div class="products__content">
+         <!-- Thêm vòng xoay loader -->
+         <!-- <div id="loader" style="display: none" class="loader"></div> -->
+
+         <div class="row" id="productList">
+            <!-- <div class="col-12 col-md-6 col-lg-4">
+               <div class="card cardPhone">
+                  <img src="../assets/img/product1.jpg" class="card-img-top" alt="product Image">
+                  <div class="card-body">
+                     <div class="d-flex justify-content-between">
+                        <div>
+                           <h2 class="cardPhone__title">Product Name</h2>
+                           <p class="cardPhone__text">Description</p>
+                        </div>
+                        <div>
+                           <h3 class="cardPhone__title">$99.99</h3>
+                        </div>
+                     </div>
+                     <div>
+                        <p class="spec">Screen :</p>
+                        <p class="spec">Back Camera : </p>
+                        <p class="spec">Front Camera : </p>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <div class="cardPhone__rating">
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                        </div>
+                        <div>
+                           <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div> -->
+
+         </div>
+      </div>
+
+   </section>
+
+   <!-- Table CartItem -Hiển thị tạm thời trước khi tạo Modal  -->
+   <div class="col-8 mx-auto">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Stt</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Image</th>
+                  <th>số lượng</th>
+              </tr>
+          </thead>
+          <tbody id="tbodyCartItem">
+
+          </tbody>
+      </table>
+  </div>
+
+   <!-- FOOTER  -->
+   <footer class="footerPhone">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    © 2023
+                </div>
+                <div class="col-8">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+   </footer>
+
+   <!-- boostrap -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"></script>
+
+   <!-- Axios -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+      integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- js -->
+   <script src="./../models/cartItem.js"></script>
+   <script src="./../models/phone.js"></script>
+   <script src="./../models/cart.js"></script>
+   <script src="./../services/api.js"></script>
+   <script src="./../views/view.js"></script>
+   <script src="./../controllers/index.js"></script>
+</body>
+
 </html>

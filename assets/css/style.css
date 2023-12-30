@@ -4,13 +4,32 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #313131 !important;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.navbar {
+  padding-top: 15px;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 header .navbar {
   padding: 0.5rem 7rem;
 }
 header .navbar .navbar-brand {
   color: #ffffff !important;
   font-size: 20px;
-  font-weight: 20px;
+  font-weight: 700;
 }
 header .navbar .navbar-nav {
   width: 100%;
@@ -18,7 +37,7 @@ header .navbar .navbar-nav {
 header .navbar .navbar-nav .nav-link {
   color: #ffffff !important;
   font-size: 20px;
-  font-weight: 20px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -41,6 +60,7 @@ header .navbar .navbar-nav .nav-link i {
 footer {
   background-image: linear-gradient(#1e2663, #9a3054);
   color: #fff;
+  font-size: 16px;
 }
 footer .footer__top {
   text-align: center;

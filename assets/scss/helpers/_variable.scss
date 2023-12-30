@@ -22,7 +22,7 @@ $fs-5: 1.6rem;
 $fs-6: 2.25rem;
 $fs-7: 20px;
 $fs-8: 44px;
-$fs-9:24px;
+$fs-9: 24px;
 
 //font weight
 $fw-1: 400;
@@ -42,8 +42,8 @@ $pd-5: 100px;
 $pd-6: 8px;
 $pd-7: 60px;
 $pd-8: 150px;
-$pd-9:5px;
-$pd-10:20px;
+$pd-9: 5px;
+$pd-10: 20px;
 
 //Margin
 $mg-0: 5px;
@@ -59,14 +59,14 @@ $bd-3: 12px;
 
 //break points
 $breakpoints: (
-    "extra-large": 1200px,
-    "large": 992px,
-    "medium": 768px,
-    "small": 576px,
-    "extra-large-down": 1199.98px,
-    "large-down": 991.98px,
-    "medium-down": 767.98px,
-    "small-down": 575.98px,
+   "extra-large": 1200px,
+   "large": 992px,
+   "medium": 768px,
+   "small": 576px,
+   "extra-large-down": 1199.98px,
+   "large-down": 991.98px,
+   "medium-down": 767.98px,
+   "small-down": 575.98px,
 );
 $home-color-primary: #f3ce5e;
 $color-white: #fff;

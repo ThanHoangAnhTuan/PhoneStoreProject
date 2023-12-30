@@ -1,0 +1,22 @@
+// base
+@import "./base/reset";
+
+// component
+@import "./components/buttons";
+
+// helpers
+@import "./helpers/minxin";
+@import "./helpers/variable";
+
+// layout
+@import "./layout/header";
+@import "./layout/footer";
+
+// pages
+@import "./pages/admin";
+@import "./pages/customer";
+@import "./pages/home";
+
+//themes
+
+// vendors

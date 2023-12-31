@@ -8,3 +8,14 @@
     color: $color-white;
     text-decoration: none;
 }
+
+@mixin limit-line-text($line-height, $numberLine) {
+    display: -webkit-box;
+    -webkit-line-clamp: $numberLine;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: $line-height;
+    min-height: calc($line-height * $numberLine);
+    margin: 0;
+}

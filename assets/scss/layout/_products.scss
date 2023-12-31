@@ -1,5 +1,30 @@
-@include responsive("small-down"){
-    .products{
-        width: 90%;
+.products {
+    margin: 0;
+    padding: 7rem;
+
+    .card-img-top {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        padding: 0.5rem;
+    }
+
+    #phoneName {
+        @include limit-line-text($fs-4, 2);
+    }
+
+    .cardPhone__text,
+    .spec {
+        @include limit-line-text($fs-3, 2);
+    }
+
+    .btnPhone-shadow {
+        border: none;
+        background-color: $color-button-3;
+        padding: 0.5rem;
+    }
+
+    .cardPhone__rating i {
+        color: $color-button-3;
     }
 }

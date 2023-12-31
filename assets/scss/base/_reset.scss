@@ -10,3 +10,14 @@ body {
     @include style-text($color-dark-1, $fs-1, $fw-1);
     background-color: $color-white;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

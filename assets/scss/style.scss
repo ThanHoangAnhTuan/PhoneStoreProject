@@ -7,10 +7,12 @@
 
 // component
 @import "./components/buttons";
+@import "./components/input";
 
 // layout
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/products";
 
 // pages
 @import "./pages/admin";

@@ -80,3 +80,15 @@ const payNow = () => {
     removeCart();
     alert("Buy Success");
 };
+
+const phoneSelect = document.querySelector("#phoneSelect");
+phoneSelect.addEventListener("change", () => {
+    if (phoneSelect.value === "all") {
+        renderUI(listProduct);
+    } else {
+        const filterPhoneSelect = listProduct.filter(
+            (product) => product.type === phoneSelect.value,
+        );
+        renderUI(filterPhoneSelect);
+    }
+});

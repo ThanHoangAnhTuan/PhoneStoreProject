@@ -1,6 +1,6 @@
 function renderAddModal() {
-   const modal = document.querySelector(".modal-footer");
-   modal.innerHTML = `<button
+    const modal = document.querySelector(".modal-footer");
+    modal.innerHTML = `<button
                      type="button"
                      id="closeModal"
                      class="btn btn-secondary"
@@ -13,38 +13,36 @@ function renderAddModal() {
 }
 
 function setError(element, message) {
-   element.className = "form-control is-invalid";
-   element.nextElementSibling.innerText = message;
-   element.nextElementSibling.className = "invalid-feedback";
+    element.className = "form-control is-invalid";
+    element.nextElementSibling.innerText = message;
+    element.nextElementSibling.className = "invalid-feedback";
 }
 
 function setSuccess(element) {
-   element.className = "form-control is-valid";
-   element.nextElementSibling.innerText = "";
-   element.nextElementSibling.className = "valid-feedback";
+    element.className = "form-control is-valid";
+    element.nextElementSibling.innerText = "";
+    element.nextElementSibling.className = "valid-feedback";
 }
 
 function setNormal(element) {
-   element.className = "form-control";
-   element.nextElementSibling.innerText = "";
-   element.nextElementSibling.className = "";
+    element.className = "form-control";
+    element.nextElementSibling.innerText = "";
+    element.nextElementSibling.className = "";
 }
 
 function resetForm() {
-   nameProduct.value = "";
-   price.value = "";
-   screen.value = "";
-   backCamera.value = "";
-   frontCamera.value = "";
-   image.value = "";
-   description.value = "";
-   type.value = "";
-   const listInputElement = document.querySelectorAll(
-      ".modal-body input"
-   );
-   const selectElement = document.querySelector("#type");
-   listInputElement.forEach((inputElement) => {
-      setNormal(inputElement);
-   });
-   setNormal(selectElement);
+    nameProduct.value = "";
+    price.value = "";
+    screen.value = "";
+    backCamera.value = "";
+    frontCamera.value = "";
+    image.value = "";
+    description.value = "";
+    type.value = "";
+    const listInputElement = document.querySelectorAll(".modal-body input");
+    const selectElement = document.querySelector("#type");
+    listInputElement.forEach((inputElement) => {
+        setNormal(inputElement);
+    });
+    setNormal(selectElement);
 }

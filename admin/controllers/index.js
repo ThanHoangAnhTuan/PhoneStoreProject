@@ -27,7 +27,7 @@ function getListProducts() {
 getListProducts();
 
 //delete phone
-function delPhone(id) {
+function deleteProduct(id) {
   api
     .deletePhone(id)
     .then(function (result) {
@@ -43,7 +43,6 @@ function delPhone(id) {
 
 //addphone
 function addPhone() {
-  debugger;
   const phoneName = nameProduct.value;
   const phonePrice = price.value;
   const phoneScreen = screen.value;
@@ -64,24 +63,96 @@ function addPhone() {
     phoneDes,
     phoneType
   );
-  console.log(phone);
+  api.postPhone(phone)
+  .then(function(result){
+    alert("Add success!!!");
+  //re-fetch data
+  getListProducts();
+  })
+  .catch(function(error){
+    console.log(error);
+  })
 }
 
+
+//edit phone
+function handleEdit(id){
+  // update tittle model
+document.getElementsByClassName("modal-title")[0].innerHTML = "Update Product";
+//add buttom "add product" => footer modal
+const btnUpdate =`<button class="btn btn-primary" onclick="updateProduct(${id})">Update Product</button>`;
+document.getElementsByClassName("modal-footer")[0].innerHTML = btnUpdate;
+
+api.getProduct(id)
+    .then(function(result) {
+      const phone = result.data;
+      getEle("name").value = phone.name;
+      getEle("price").value = phone.price;
+      getEle("screen").value = phone.screen;
+      getEle("backCamera").value = phone.backCamera;
+      getEle("frontCamera").value = phone.frontCamera;
+      getEle("image").value = phone.image;
+      getEle("description").value = phone.description;
+      getEle("type").value = phone.type;
+      
+
+})
+.catch(function(error){
+  console.log(error);
+})
+}
+
+
+//Update Phone
+function updateProduct(id) {
+  // // Logic để cập nhật sản phẩm với ID được cung cấp
+  // // Ví dụ:
+  // console.log(`Đang cập nhật sản phẩm với ID: ${id}`);
+  // // Bạn có thể thêm logic cập nhật ở đây
+  // debugger;
+  const phoneName = nameProduct.value;
+  const phonePrice = price.value;
+  const phoneScreen = screen.value;
+  const phoneBackCam = backCamera.value;
+  const phoneFrontCam = frontCamera.value;
+  const phoneImgLink = image.value;
+  const phoneDes = description.value;
+  const phoneType = type.value;
+
+  const phone = new Phone(
+    "",
+    phoneName,
+    phonePrice,
+    phoneScreen,
+    phoneBackCam,
+    phoneFrontCam,
+    phoneImgLink,
+    phoneDes,
+    phoneType
+  );
+
+  api.putPhone(phone,id)
+  .then(function(result){
+    alert("Update success!!!");
+  
+    getListProducts();
+    
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+  
+}
+
+
 const openAddModalButton = document.querySelector("#openAddModal");
-// nút này là nút khi em mở modal lên: là nút add phone
 openAddModalButton.addEventListener("click", () => {
   renderAddModal();
 
   const closeModalButton = document.querySelector("#closeModal");
   const addPhoneButton = document.querySelector("#addPhone");
-  // đây là nút khi em nhập thông tin vào input xong em click: nút add phone màu xanh
   addPhoneButton.addEventListener("click", () => {
     if (validation()) {
-      // khi mà em điền thông tin vào phải đúng với điều kiện anh thực hiện ở đây
-      // khi mà em nhập không đúng nó sẽ báo đỏ và hiện dòng chữ thông báo
-      // em phải điền toàn bộ thì mới được add phone
-      // nãy em chưa chạy hàm add phone khi validate xong: dòng 85
-      // nên nó không ra gì hết
       addPhone();
       closeModalButton.click();
       resetForm();

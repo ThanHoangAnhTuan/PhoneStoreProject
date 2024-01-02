@@ -1,8 +1,7 @@
-
- function CartItem(_id, _name, _price, _image, _quality) {
-    this._id = _id;
-    this._name = _name;
-    this._price = _price;
-    this._image = _image;
-    this._quality = _quality;
- }
+function CartItem(_id, _name, _price, _image, _quantity) {
+    this.id = _id;
+    this.name = _name;
+    this.price = _price;
+    this.image = _image;
+    this.quantity = _quantity;
+}

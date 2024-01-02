@@ -1,11 +1,21 @@
 @mixin style-text($color, $font-size, $fw) {
-   color: $color !important;
-   font-size: $font-size;
-   font-weight: $font-size;
+    color: $color !important;
+    font-size: $font-size;
+    font-weight: $fw;
 }
 
 @mixin link {
-   color: $color-white;
-   text-decoration: none;
+    color: $color-white;
+    text-decoration: none;
 }
 
+@mixin limit-line-text($line-height, $numberLine) {
+    display: -webkit-box;
+    -webkit-line-clamp: $numberLine;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: $line-height;
+    min-height: calc($line-height * $numberLine);
+    margin: 0;
+}

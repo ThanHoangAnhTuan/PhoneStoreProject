@@ -1,7 +1,17 @@
-function CART() {
-    this.cart = [];
+function Cart() {
+    this.listCartItem = [];
 
-    this.addCart = function(item) {
-        this.cart.push(item);
+    this.addCartItem = (data) => {
+        this.listCartItem.push(data);
+    };
+
+    this.find = (id) => {
+        return this.listCartItem.findIndex((cartItem) => cartItem.id === id);
+    };
+
+    this.removeCartItem = (id) => {
+        this.listCartItem = this.listCartItem.filter(
+            (cartItem) => cartItem.id === id,
+        );
     };
 }

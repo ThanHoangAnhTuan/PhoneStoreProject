@@ -13,6 +13,7 @@ function getEle(id) {
   return document.getElementById(id);
 }
 
+
 function getListProducts() {
   api
     .getListProduct()
@@ -65,7 +66,9 @@ function addPhone() {
   );
   api.postPhone(phone)
   .then(function(result){
-    alert("Add success!!!");
+    // alert("Add success!!!");
+    const closeModalAdd = document.getElementById("closeModal");
+    closeModalAdd.click();
   //re-fetch data
   getListProducts();
   })
@@ -79,9 +82,15 @@ function addPhone() {
 function handleEdit(id){
   // update tittle model
 document.getElementsByClassName("modal-title")[0].innerHTML = "Update Product";
+//add close 
+const btnClose = `<button class="btn btn-secondary" id="closeUpdate" data-dismiss="modal">Close</button>`;
 //add buttom "add product" => footer modal
 const btnUpdate =`<button class="btn btn-primary" onclick="updateProduct(${id})">Update Product</button>`;
-document.getElementsByClassName("modal-footer")[0].innerHTML = btnUpdate;
+// document.getElementsByClassName("modal-footer")[0].innerHTML = btnUpdate;
+
+
+document.getElementsByClassName("modal-footer")[0].innerHTML =btnClose + btnUpdate  ;
+// modalFooter.innerHTML = modalFooter.innerHTML + btnUpdate + btnClose;
 
 api.getProduct(id)
     .then(function(result) {
@@ -105,11 +114,6 @@ api.getProduct(id)
 
 //Update Phone
 function updateProduct(id) {
-  // // Logic để cập nhật sản phẩm với ID được cung cấp
-  // // Ví dụ:
-  // console.log(`Đang cập nhật sản phẩm với ID: ${id}`);
-  // // Bạn có thể thêm logic cập nhật ở đây
-  // debugger;
   const phoneName = nameProduct.value;
   const phonePrice = price.value;
   const phoneScreen = screen.value;
@@ -134,9 +138,10 @@ function updateProduct(id) {
   api.putPhone(phone,id)
   .then(function(result){
     alert("Update success!!!");
-  
+    const closeModalButton = document.getElementById("closeUpdate");
+    closeModalButton.click();
     getListProducts();
-    
+    resetForm();
   })
   .catch(function(error){
     console.log(error);
@@ -148,8 +153,10 @@ function updateProduct(id) {
 const openAddModalButton = document.querySelector("#openAddModal");
 openAddModalButton.addEventListener("click", () => {
   renderAddModal();
+  resetForm();
 
-  const closeModalButton = document.querySelector("#closeModal");
+  
+
   const addPhoneButton = document.querySelector("#addPhone");
   addPhoneButton.addEventListener("click", () => {
     if (validation()) {

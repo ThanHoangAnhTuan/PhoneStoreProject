@@ -75,12 +75,32 @@
             <!-- Header table -->
             <div class="card-header myCardHeader">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <h3 class="text-left text-primary font-weight-bold">
                             Phone Management
                         </h3>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-3">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input
+                                id="searchName"
+                                class="form-control mr-sm-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search" />
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <select
+                            name="price"
+                            id="selectPrice"
+                            style="height: 100%; outline: none">
+                            <option selected disabled>Sort</option>
+                            <option value="asc">Giá: Tăng dần</option>
+                            <option value="desc">Giá: Giảm dần</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 text-right">
                         <button
                             class="btn"
                             id="openAddModal"
@@ -94,7 +114,7 @@
             </div>
 
             <!-- table -->
-            <div class="table-responsive-xl">
+            <div class="table-responsive">
                 <table class="table table-hover mb-5">
                     <thead>
                         <tr>
@@ -226,9 +246,9 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text"
-                                                id="basic-addon1"
-                                                ><i class="fa-solid fa-link"></i
-                                            ></span>
+                                                id="basic-addon1">
+                                                <i class="fa-solid fa-link"></i>
+                                            </span>
                                         </div>
                                         <input
                                             id="image"
@@ -243,10 +263,10 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text"
-                                                id="basic-addon1"
-                                                ><i
-                                                    class="fa-solid fa-comment"></i
-                                            ></span>
+                                                id="basic-addon1">
+                                                <i
+                                                    class="fa-solid fa-comment"></i>
+                                            </span>
                                         </div>
                                         <input
                                             id="description"
@@ -369,21 +389,19 @@
             </div>
         </footer>
 
-      <!-- boostrap -->
-      <script
-
-      
-         src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-         crossorigin="anonymous"></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-         crossorigin="anonymous"></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-         crossorigin="anonymous"></script>
+        <!-- boostrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
 
         <!-- axios cdn -->
         <script
@@ -396,7 +414,6 @@
         <script src="./../models/model.js"></script>
         <script src="./../services/api.js"></script>
         <script src="./../views/view.js"></script>
-        <script src="./view2.js"></script>
         <script src="./../controllers/index.js"></script>
     </body>
 </html>

@@ -71,14 +71,23 @@ const removeCartItem = (id) => {
 };
 
 const removeCart = () => {
-    cart.listCartItem = [];
-    renderCart(cart.listCartItem);
-    localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
+    if (cart.listCartItem.length > 0) {
+        cart.listCartItem = [];
+        renderCart(cart.listCartItem);
+        localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
+        alert("Remove Success");
+    } else {
+        alert("Cart Empty");
+    }
 };
 
 const payNow = () => {
-    removeCart();
-    alert("Buy Success");
+    if (cart.listCartItem.length > 0) {
+        removeCart();
+        alert("Buy Success");
+    } else {
+        alert("Cart Empty");
+    }
 };
 
 const phoneSelect = document.querySelector("#phoneSelect");

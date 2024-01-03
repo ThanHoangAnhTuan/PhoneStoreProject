@@ -79,6 +79,7 @@ function addPhone() {
 //edit phone
 function handleEdit(id) {
     // update tittle model
+    resetForm();
     document.getElementsByClassName("modal-title")[0].innerHTML =
         "Update Product";
     //add close

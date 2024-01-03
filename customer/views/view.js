@@ -2,7 +2,7 @@ const renderUI = (data) => {
     const productList = document.querySelector("#productList");
     const htmls = data.map((product) => {
         return `
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card cardPhone">
                     <img
                         id="phoneImage"

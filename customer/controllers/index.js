@@ -1,5 +1,6 @@
 const api = new Api();
 let cart = new Cart();
+cart.listCartItem = [];
 let listProduct = [];
 
 cart.listCartItem = JSON.parse(localStorage.getItem("cart"));

@@ -1,5 +1,5 @@
 function Cart() {
-    this.listCartItem = [];
+    this.listCartItem;
 
     this.addCartItem = (data) => {
         this.listCartItem.push(data);

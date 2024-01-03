@@ -1,6 +1,5 @@
 const api = new Api();
 let cart = new Cart();
-cart.listCartItem = [];
 let listProduct = [];
 
 cart.listCartItem = JSON.parse(localStorage.getItem("cart"));
@@ -12,17 +11,32 @@ const start = async () => {
     const responsive = await api.getListProduct();
     const data = responsive.data;
     listProduct = data;
+    cart.listCartItem = [];
     renderUI(listProduct);
 };
 
 start();
 
 const handleAddCart = (id) => {
-    const findCartItem = cart.listCartItem.find(
-        (cartItem) => Number(cartItem.id) === id,
-    );
-    if (findCartItem) {
-        findCartItem.quantity++;
+    if (cart.listCartItem.length > 0) {
+        const findCartItem = cart.listCartItem.find(
+            (cartItem) => Number(cartItem.id) === id,
+        );
+        if (findCartItem) {
+            findCartItem.quantity++;
+        } else {
+            const product = listProduct.find(
+                (product) => Number(product.id) === id,
+            );
+            const cartItem = new CartItem(
+                product.id,
+                product.name,
+                product.price,
+                product.image,
+                1,
+            );
+            cart.addCartItem(cartItem);
+        }
     } else {
         const product = listProduct.find(
             (product) => Number(product.id) === id,

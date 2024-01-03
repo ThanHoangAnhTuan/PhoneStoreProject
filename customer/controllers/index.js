@@ -17,48 +17,46 @@ const start = async () => {
 start();
 
 const handleAddCart = (id) => {
-    if (cart.listCartItem.length > 0) {
-        const fintCartItem = cart.listCartItem.find(
-            (cartItem) => Number(cartItem.id) === id,
+    const findCartItem = cart.listCartItem.find(
+        (cartItem) => Number(cartItem.id) === id,
+    );
+    if (findCartItem) {
+        findCartItem.quantity++;
+    } else {
+        const product = listProduct.find(
+            (product) => Number(product.id) === id,
         );
-        if (fintCartItem) {
-            fintCartItem.quantity++;
-        } else {
-            const product = listProduct.find(
-                (product) => Number(product.id) === id,
-            );
-            const cartItem = new CartItem(
-                product.id,
-                product.name,
-                product.price,
-                product.image,
-                1,
-            );
-            cart.addCartItem(cartItem);
-        }
-        renderCart(cart.listCartItem);
-        localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
+        const cartItem = new CartItem(
+            product.id,
+            product.name,
+            product.price,
+            product.image,
+            1,
+        );
+        cart.addCartItem(cartItem);
     }
+    renderCart(cart.listCartItem);
+    localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
 };
 
 const minusQuantity = (id) => {
-    const fintCartItem = cart.listCartItem.find(
+    const findCartItem = cart.listCartItem.find(
         (cartItem) => Number(cartItem.id) === id,
     );
 
-    if (fintCartItem.quantity > 1) {
-        fintCartItem.quantity--;
+    if (findCartItem.quantity > 1) {
+        findCartItem.quantity--;
         renderCart(cart.listCartItem);
         localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
     }
 };
 
 const addQuantity = (id) => {
-    const fintCartItem = cart.listCartItem.find(
+    const findCartItem = cart.listCartItem.find(
         (cartItem) => Number(cartItem.id) === id,
     );
 
-    fintCartItem.quantity++;
+    findCartItem.quantity++;
     renderCart(cart.listCartItem);
     localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
 };

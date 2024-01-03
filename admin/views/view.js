@@ -1,15 +1,15 @@
 function renderAddModal() {
     const modal = document.querySelector(".modal-footer");
     modal.innerHTML = `<button
-                     type="button"
-                     id="closeModal"
-                     class="btn btn-secondary"
-                     data-dismiss="modal">
-                     Close
-                  </button>
-                  <button id="addPhone" type="button" class="btn btn-success">
-                     Add Phone
-                  </button>`;
+                            type="button"
+                            id="closeModal"
+                            class="btn btn-secondary"
+                            data-dismiss="modal">
+                            Close
+                        </button>
+                        <button id="addPhone" type="button" class="btn btn-success">
+                            Add Phone
+                        </button>`;
 }
 
 function setError(element, message) {

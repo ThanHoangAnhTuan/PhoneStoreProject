@@ -1,0 +1,46 @@
+.home {
+    background-image: url(https://shopping-cart-demo2.vercel.app/customer/view/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+            text-align: center;
+
+            &:hover h2::after {
+                width: 100%;
+            }
+
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                display: block;
+                background-color: $color-white;
+                border-radius: 70px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                display: inline-block;
+                color: $home-color-primary;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0%;
+                    height: 4px;
+                    background-color: $home-color-primary;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

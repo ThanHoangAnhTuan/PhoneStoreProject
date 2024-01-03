@@ -1,41 +1,55 @@
-header{
-    background-color: $color-dark-1;
-    // margin-bottom: $mg-2;
-    height: 80px;
+.navbar {
+    padding-top: $pd-3;
+}
 
-    .navbar{
-        padding-top: $pd-3;
-    }
+.navbar-brand {
+    @include style-text($color-text-1, $fs-3, $fw-3);
+}
+// .collapse {
+//     align-items: center;
+//     .navbar-nav {
+//         .nav-item {
+//             .nav-link {
+//                 @include style-text($color-text-1, $fs-3, $fw-2);
+//             }
+//         }
+//     }
+// }
 
-    .navbar-brand{
-        @include style-text($color-text-1,$fs-3,$fw-3)
-    }
-    .navbar-nav{
-        .nav-item{
-            .nav-link{
-                @include style-text($color-text-1,$fs-3,$fw-2)
+header {
+    .navbar {
+        padding: 0.5rem 7rem;
+
+        .navbar-brand {
+            @include style-text($color-text-1, $fs-3, $fw-3);
+        }
+
+        .navbar-nav {
+            width: 100%;
+
+            .nav-link {
+                @include style-text($color-text-1, $fs-3, $fw-1);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $color-white;
+                    transform: scale(1.2);
+                }
+
+                i {
+                    font-size: 30px;
+                }
             }
         }
     }
 }
 
-
-//table
-
-
-.myCardHeader {
-    background-color: $color-table;
-    border-top-left-radius: $bd-3 !important;
-    border-top-right-radius: $bd-3 !important;
-    margin-top: $mg-3;
-    .text-left{
-        color: $color-text-1 !important;
-    }
-    .text-right{
-        .btn{
-            background-color: $color-button-1 ;
-            color: $color-text-1;
-        }
+@media (min-width: 992px) {
+    header .nav-item:nth-of-type(2) {
+        margin-right: auto;
     }
 }
-

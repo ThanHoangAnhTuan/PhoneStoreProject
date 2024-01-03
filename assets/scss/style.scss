@@ -1,16 +1,18 @@
+// helpers
+@import "./helpers/minxin";
+@import "./helpers/variable";
+
 // base
 @import "./base/reset";
 
 // component
 @import "./components/buttons";
-
-// helpers
-@import "./helpers/minxin";
-@import "./helpers/variable";
+@import "./components/input";
 
 // layout
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/products";
 
 // pages
 @import "./pages/admin";

@@ -6,6 +6,13 @@ function Api() {
         });
     };
 
+    this.getProduct = function(id){
+        return axios({
+            method:"get",
+            url: `https://657c7fff853beeefdb998ca8.mockapi.io/products/${id}`,
+        })
+    }
+
     this.postPhone = function (data) {
         return axios({
             method: "post",

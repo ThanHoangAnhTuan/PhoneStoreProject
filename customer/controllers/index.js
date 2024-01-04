@@ -97,7 +97,9 @@ const removeCart = () => {
 
 const payNow = () => {
     if (cart.listCartItem.length > 0) {
-        removeCart();
+        cart.listCartItem = [];
+        renderCart(cart.listCartItem);
+        localStorage.setItem("cart", JSON.stringify(cart.listCartItem));
         alert("Buy Success");
     } else {
         alert("Cart Empty");
